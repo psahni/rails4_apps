@@ -1,0 +1,3 @@
+* Streaming data to the client
+    include ActionController::Live in controllers. 
+    All actions executed from ActionController::Live enabled controllers are run in a separate thread, thus controller action code must be thread safe.
