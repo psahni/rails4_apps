@@ -11,3 +11,152 @@
  *= require_self
  *= require_tree .
  */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; 
+    
+}
+
+
+
+html{
+    display: block;
+    background: #F6F6F1 url("/assets/bg.png");
+    height: 100%;
+    min-width: 1000px;
+
+}
+
+a{
+    text-decoration: none;
+    cursor: auto;
+    color: white;
+}
+
+body{
+  font: normal 16px Tahoma,Arial,sans-serif;
+  margin:0
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"], form textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #DCD7CE;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.35),0 1px 0 #fff;
+    color: #565658;
+    font: 1.6em "OpenSansRegular",Helvetica,Arial,sans-serif;
+    padding: 7px;
+    width: 100%;
+}
+ 
+.full_width{
+    width: 980px;
+}
+#header{
+ background: #281F23;
+ color: #CCC;
+ border-top: 4px solid white;
+ border-bottom: 4px solid #F8D575;
+ height: 45px;
+ min-width:940px;
+ padding: 0 20px;
+ position: relative;
+ z-index: 1;
+}
+
+.wrap{
+  padding-top: 14.5px;
+}
+
+#logo{
+    float: left;
+}
+#logo a{
+  color: white;
+  text-decoration: none;
+}
+
+#logo a:hover{
+  color: green;   
+}
+
+#ce_session_links{
+    float:right;
+}
+
+#ce_username{ 
+  border-right: 1px solid #3C3437;
+      padding: 0 10px;
+}
+
+#ce_session{
+    border: none;
+}
+
+#ce_session{
+    padding: 0 10px;
+}
+
+.block{
+  margin-left:auto;
+  margin-right: auto;
+  zoom:1;
+}
+
+.fl{
+    float:left;
+}
+.fr{
+ float:right;
+}
+
+#registration{
+    padding: 30px;
+    margin-top: 20px;
+    margin-left:30px;
+}
+.form-horizontal{
+    border-color: #D7D3C9;
+    padding-top: 25px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+
+.form-horizontal label{
+    padding-top: 5px;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.fields{
+    margin: 0 0 20px;
+}
+.content h2{
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+.center{
+    text-align:center;
+}
+
+#registration h2{
+ padding: 0 30px;   
+}
+
+.default-button{
+    padding: 9px 15px;
+    font-size: 18px;
+    float: left;
+    clear:both;
+}
+.button-orange{
+    color: white;
+    background-color: #F90;
+    border-color:#DB7500;
+}

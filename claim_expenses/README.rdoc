@@ -11,6 +11,16 @@ The Rails executable is at:
 * create an alias and add it to .bashrc. 
     alias rails4="`bundle show rails`/railties/bin/rails"
 
-#Important gems
-* Devise
+Important gems
+============================================
+
+Devise
+https://github.com/plataformatec/devise
+    generated devise views
+    <tt>rails4 generate devise:views</tt>
     
+Passenger Installation Gude
+http://www.modrails.com/documentation/Users%20guide%20Standalone.html
+    After installing passenger, hit 'passenger' from terminal
+    it will automatically install and compile ngnix if not already installed
+    see the screenshot taken in the images folder

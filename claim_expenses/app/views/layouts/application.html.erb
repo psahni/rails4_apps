@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <header id="header">
+    <div class='wrap'>
+      <div id="logo">
+        <a href="<%=root_path%>">Claim Your Expenses</a>
+      </div>
+      <div id="ce_session_links">
+        <a href="" id="ce_username">psahni</a>
+        <a href="<%=sign_in_url%>" id="ce_session">Sign In</a>
+      </div>
+    </div>
+  </header>
+  <section class="content">
+    <%= yield %>
+  </section>
 </body>
 </html>
