@@ -8,7 +8,9 @@ The Rails executable is at:
 
 * Create `bundle show rails`/railties/bin/rails new testapp
 
+* create an alias and add it to .bashrc. 
+    alias rails4="`bundle show rails`/railties/bin/rails"
+
 #Important gems
 * Devise
-    * Usage
     
