@@ -1,7 +1,22 @@
 ClaimExpenses::Application.routes.draw do
   root :to => 'home#index'
+  resources :home do
+    collection do
+      get "after_sign_out_path"
+    end
+  end
+  resources :expenses
+  
+  namespace :admin do
+    resources :expenses
+  end
+  
+  # => DEVISE
   devise_for :users
-  match '/users/sign_in', :controller => "devise/sessions", :action => "new", :as => :sign_in, :via => :get
+  
+
+  #match '/sign_in', :controller => "devise/sessions", :action => "new", :as => :sign_in, :via => :get
+#  match '/sign_up', :controller => "devise/registrations",  :action => "new", :as => :sign_up, :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
