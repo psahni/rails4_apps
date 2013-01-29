@@ -21,13 +21,26 @@ class ApplicationController < ActionController::Base
 #  end
 #   
 
-def after_sign_out_path_for(resource_or_scope)
-   after_sign_out_path_home_index_url
-end
- 
+  def after_sign_out_path_for(resource_or_scope)
+     after_sign_out_path_home_index_url
+  end
+  
+  def admin_authenticate 
+   if user_signed_in? 
+     if current_user.admin?
+       redirect_to expenses_path
+    else
+      redirect_to admin_expenses_path
+    end
+   end
+   
+  end
+  
 end
 
-###############33
+######################################################################
 #http://stackoverflow.com/questions/6499589/devise-redirect-page-after-confirmation
 #http://stackoverflow.com/questions/8234023/devise-after-sign-in-path-for-sending-to-root-path-query
-#http://blog.devinterface.com/2011/05/two-step-signup-with-devise/
+# http://blog.devinterface.com/2011/05/two-step-signup-with-devise/
+#http://edapx.com/2012/04/18/authorization-and-user-management-in-rails/ - can can and devise
+######################################################################
