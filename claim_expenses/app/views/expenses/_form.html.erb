@@ -1,0 +1,12 @@
+
+<%= simple_form_for @expense, :html => { :class => 'form-horizontal' } do |form|%>
+  <%=form.input :item_name, :placeholder => "Item Name", :label_html => {:class => "abc"}%>
+  <div class="control-group">
+    <label class="" for="inputEmail">Email</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" placeholder="Email">
+    </div>
+  </div>
+<% end %>
+
+

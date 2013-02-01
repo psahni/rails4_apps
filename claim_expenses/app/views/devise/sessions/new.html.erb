@@ -1,24 +1,27 @@
 <div class="block span12">
-  
-
   <div id="sessions" class="form-horizontal span7 fl">
-    <h2>Sign in</h2>
+    <h2 class="span4">Sign in</h2>
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-      <div><%= f.label :email %><br />
-      <%= f.email_field :email %></div>
+      
+      <div class="fields span6">
+       <%= f.label :email, :class => "span6" %>
+       <%= f.email_field :email, :class => "span6" %>
+       </div>
 
-      <div><%= f.label :password %><br />
-      <%= f.password_field :password %></div>
+      <div class="fields span6">
+        <%= f.label :password, :class => "span6" %>
+        <%= f.password_field :password, :class => "span6" %>
+      </div>
 
       <% if devise_mapping.rememberable? -%>
-        <div class="span4">
+        <div class="fields span6">
           <%= f.check_box :remember_me, :class=> "span1" %> 
           <%= f.label :remember_me, :class => "span2" %>
          </div>
       <% end -%>
       
-      <div class="button span4">
-        <%= f.submit "Sign up" , :class => "button-orange fl default-button"%>
+      <div class="button span4 offset2">
+        <%= f.submit "Submit" , :class => "button-orange fl default-button"%>
       </div>
     <% end %>
   </div>

@@ -26,14 +26,13 @@ class ApplicationController < ActionController::Base
   end
   
   def admin_authenticate 
-   if user_signed_in? 
-     if current_user.admin?
-       redirect_to expenses_path
-    else
-      redirect_to admin_expenses_path
+    authenticate_user!
+  end
+  
+  def not_signed_in
+    if current_user
+      redirect_to after_sign_in_path_for(current_user) and return false
     end
-   end
-   
   end
   
 end

@@ -2,7 +2,9 @@
 <html>
 <head>
   <title>ClaimExpenses</title>
+  <!-- STYLESHEET -->
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true%>
+  <!-- JAVASCRIPT -->
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -20,11 +22,10 @@
           <a href="/users/sign_in" id="ce_session">Sign In</a>
           <a href="/users/sign_up" id="ce_se">Sign Up</a>
         <% end %>
-        
       </div>
     </div>
   </header>
-  <section class="content">
+  <section class="content container">
     <%= yield %>
   </section>
 </body>

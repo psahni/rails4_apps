@@ -1,12 +1,8 @@
 
-<p id="notice">
-  <%= notice %>
- </p>
 
-<% if user_signed_in? %>
-  <h1>Listing Expenses</h1>
-<% else %>
-  <div class="alert alert-error span12 offset2 mt-medium">
-     You have to sign in first
-  </div>
-<% end%>
+<%=flash_message %>
+
+<div class="span11 template">
+  <h3 class="t-heading"> Add item list </h3>
+  <%=render :partial => "form", :object => @expense%>
+</div>

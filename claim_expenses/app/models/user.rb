@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
   
   
     def admin?
-      self.email.match(/^admin@ce.com$/)
+      self.email.match(/^admin@ce.com/)
     end                
 end
