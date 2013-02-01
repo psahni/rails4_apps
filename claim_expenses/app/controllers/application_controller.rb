@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
     Rails.logger.info resource.inspect
     Rails.logger.info "*********************************"
     if resource.admin?
-          admin_expenses_path
+      admin_expenses_path
     else
-        expenses_path
+      expenses_path
     end
   end
 

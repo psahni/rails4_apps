@@ -6,5 +6,7 @@
 <% if user_signed_in? %>
   <h1>Listing Expenses</h1>
 <% else %>
-   <strong>You have to sign in</strong>
+  <div class="alert alert-error span12 offset2 mt-medium">
+     You have to sign in first
+  </div>
 <% end%>

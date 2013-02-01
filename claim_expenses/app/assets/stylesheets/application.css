@@ -117,7 +117,7 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
  float:right;
 }
 
-#registration{
+#sessions{
     padding: 30px;
     margin-top: 20px;
     margin-left:30px;
@@ -145,7 +145,7 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
     text-align:center;
 }
 
-#registration h2{
+#sessions h2{
  padding: 0 30px;   
 }
 
@@ -159,4 +159,9 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
     color: white;
     background-color: #F90;
     border-color:#DB7500;
+}
+
+/***** MARGINS ****/
+.mt-medium{
+    margin-top: 10px;
 }
