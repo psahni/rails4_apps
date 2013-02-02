@@ -16,11 +16,11 @@
       </div>
       <div id="ce_session_links">
         <% if user_signed_in? %>  
-        <a href="" id="ce_username"><%=current_user.email%></a>
-        <%=link_to "Log Out",  destroy_user_session_path, :id => "ce_session", :method => :delete%>
+        <a href="" id="ce_username" class="white_link"><%=current_user.email%></a>
+        <%=link_to "Log Out",  destroy_user_session_path, :id => "ce_session", :method => :delete, :class => "white_link"%>
         <% else %>  
-          <a href="/users/sign_in" id="ce_session">Sign In</a>
-          <a href="/users/sign_up" id="ce_se">Sign Up</a>
+          <a href="/users/sign_in" id="ce_session" class="white_link">Sign In</a>
+          <a href="/users/sign_up" id="ce_se" class="white_link">Sign Up</a>
         <% end %>
       </div>
     </div>

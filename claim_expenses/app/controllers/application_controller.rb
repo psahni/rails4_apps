@@ -5,9 +5,6 @@ class ApplicationController < ActionController::Base
 
   
   def after_sign_in_path_for(resource)
-    Rails.logger.info "*********************************"
-    Rails.logger.info resource.inspect
-    Rails.logger.info "*********************************"
     if resource.admin?
       admin_expenses_path
     else
@@ -37,9 +34,4 @@ class ApplicationController < ActionController::Base
   
 end
 
-######################################################################
-#http://stackoverflow.com/questions/6499589/devise-redirect-page-after-confirmation
-#http://stackoverflow.com/questions/8234023/devise-after-sign-in-path-for-sending-to-root-path-query
-# http://blog.devinterface.com/2011/05/two-step-signup-with-devise/
-#http://edapx.com/2012/04/18/authorization-and-user-management-in-rails/ - can can and devise
-######################################################################
+
