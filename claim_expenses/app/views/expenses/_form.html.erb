@@ -1,8 +1,24 @@
-
-<%= simple_form_for @expense, :html => { :class => 'form-horizontal' } do |form|%>
-  <%=form.input :item_name, :placeholder  => "Fruits, Lunch, etc ...", :input_html => {:class => "input_width" }%>
-  <%=form.input :item_price, :placeholder => 'In Rupees', :input_html => {:class => "input_width" }%>
-  <%=form.input :category_id, :collection => ExpenseCategory.all.collect{|ec| [ec.name, ec.id]}, :prompt => "Select"%>
+<%= simple_form_for @expense do |form|%>
+  
+      
+      <div class="span2">
+        <%=form.input :item_name, :placeholder  => "Fruits, Lunch, etc ...", :input_html => {:class => 'input_width'}%>
+      </div>
+      
+      <div class="span2">
+        <%=form.input :category_id, :collection => ExpenseCategory.all.collect{|ec| [ec.name, ec.id]}, :prompt => "Select"%>
+      </div>
+      
+      <div class="span2">
+        <%=form.input :item_price, :placeholder => 'In Rupees', :input_html => {:class => 'input_width'}%>
+      </div>
+      
+      <div class="span2">
+        <button class="button-orange fl default-button">Add</button>
+      </div>
+      
+    
+  
 <% end %>
 <!-- 
 

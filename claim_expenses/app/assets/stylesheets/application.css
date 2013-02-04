@@ -203,7 +203,8 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
 }
 
 .input_width{
-    width: 50% !important;
+    font-size: 1em !important;
+    width: 100% !important;
 }
 
 

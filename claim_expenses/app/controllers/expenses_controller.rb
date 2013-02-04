@@ -6,4 +6,13 @@ class ExpensesController < ApplicationController
     @expense = Expense.new
   end  
   
+  def create
+  end
+  
+  def destory
+  end
+  
+  def edit
+  end
+  
 end
