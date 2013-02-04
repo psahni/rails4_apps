@@ -1,10 +1,8 @@
 
-<p id="notice">
-  <%= notice %>
- </p>
 
-<% if user_signed_in? %>
-  <h1>Listing Expenses</h1>
-<% else %>
-   <strong>You have to sign in</strong>
-<% end%>
+<%=flash_message %>
+
+<div class="span11 template">
+  <h2 class="t-heading"> Add item list </h2>
+  <%=render :partial => "form", :object => @expense%>
+</div>

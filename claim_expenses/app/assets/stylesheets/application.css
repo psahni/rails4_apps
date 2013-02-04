@@ -7,9 +7,13 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
+ *= require reset
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require expenses
  *= require_self
- *= require_tree .
+ *  require_tree .
+  
  */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
     margin:0;
@@ -31,12 +35,20 @@ html{
 
 }
 
+label, select, button, 
+input[type="button"], input[type="reset"], 
+input[type="submit"], input[type="radio"], input[type="checkbox"],a {
+cursor: pointer;
+}
+
 a{
     text-decoration: none;
     cursor: auto;
-    color: white;
 }
 
+.white_link{
+ color: white;   
+}
 body{
   font: normal 16px Tahoma,Arial,sans-serif;
   margin:0
@@ -53,7 +65,7 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
     color: #565658;
     font: 1.6em "OpenSansRegular",Helvetica,Arial,sans-serif;
     padding: 7px;
-    width: 100%;
+    width: 65%;
 }
  
 .full_width{
@@ -69,6 +81,7 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
  padding: 0 20px;
  position: relative;
  z-index: 1;
+ margin-bottom: 30px;
 }
 
 .wrap{
@@ -117,14 +130,15 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
  float:right;
 }
 
-#registration{
-    padding: 30px;
+#sessions{
+    padding: 30px 0px 30px 0px;
     margin-top: 20px;
     margin-left:30px;
 }
 .form-horizontal{
     border-color: #D7D3C9;
     padding-top: 25px;
+    padding-bottom: 10px;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
 }
 
@@ -139,13 +153,13 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
 }
 .content h2{
     margin-bottom: 20px;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 .center{
     text-align:center;
 }
 
-#registration h2{
+#sessions h2{
  padding: 0 30px;   
 }
 
@@ -160,3 +174,40 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
     background-color: #F90;
     border-color:#DB7500;
 }
+
+.lead{
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+/***** MARGINS ****/
+.mt-medium{
+    margin-top: 10px;
+}
+.mt-large{
+    margin-top: 15px;
+}
+
+/*****Page template*****/
+
+.template{
+ margin: 0;
+ padding: 30px 30px 30px 30px;
+ position: relative;
+ background: white;
+}
+.t-heading{
+    color: #C00;
+}
+
+.input_width{
+    font-size: 1em !important;
+    width: 100% !important;
+}
+
+
+/*Select*/
+
+

@@ -12,8 +12,10 @@ class User < ActiveRecord::Base
                   :remember_me
                   
   
+
+  def admin?
+    self.email.match(/^admin@ce.com/)
+  end       
   
-    def admin?
-      self.email.match(/^admin@ce.com$/)
-    end                
+           
 end

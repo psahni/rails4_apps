@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/plataformatec/simple_form.git
+  revision: f70d638f38459474609a452bf3df71a8dc969cff
+  branch: rails_4
+  specs:
+    simple_form (3.0.0.dev)
+      actionpack (>= 4.0.0.beta, < 4.1)
+      activemodel (>= 4.0.0.beta, < 4.1)
+
+GIT
   remote: https://github.com/rails/protected_attributes.git
   revision: c8aa047098e1e8e3eb7bf9eb78ec77187cbc00fe
   specs:
@@ -136,6 +145,7 @@ DEPENDENCIES
   passenger
   protected_attributes!
   rails!
+  simple_form!
   sprockets-rails (~> 2.0.0.rc1)
   therubyracer
   uglifier (>= 1.0.3)
