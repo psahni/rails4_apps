@@ -3,15 +3,15 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  
+
   def after_sign_in_path_for(resource)
     Rails.logger.info "*********************************"
     Rails.logger.info resource.inspect
     Rails.logger.info "*********************************"
     if resource.admin?
-          admin_expenses_path
+     admin_expenses_path
     else
-        expenses_path
+     expenses_path
     end
   end
 
@@ -19,23 +19,23 @@ class ApplicationController < ActionController::Base
 #    logger.info "You find me here man!!"
 #     redirect_to expenses_path and return
 #  end
-#   
+#
 
   def after_sign_out_path_for(resource_or_scope)
      after_sign_out_path_home_index_url
   end
-  
-  def admin_authenticate 
-   if user_signed_in? 
+
+  def admin_authenticate
+   if user_signed_in?
      if current_user.admin?
        redirect_to expenses_path
     else
       redirect_to admin_expenses_path
     end
    end
-   
+
   end
-  
+
 end
 
 ######################################################################
