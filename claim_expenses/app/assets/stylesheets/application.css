@@ -207,7 +207,10 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
     width: 100% !important;
 }
 
+/**************/
 
-/*Select*/
-
+.help-inline{
+    display:block;    
+    color: #B94A48;
+}
 

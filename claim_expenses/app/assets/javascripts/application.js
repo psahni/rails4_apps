@@ -14,3 +14,37 @@
 //= require jquery_ujs
 //= require plugins/dropdown
 //= require plugins/bootstrap-buttons
+
+
+var Form = function(objName){
+     
+     this.initialize = function(){
+        this.bindErrors();
+     },
+     this.bindErrors = function(){
+       var self = this;
+           
+       $("form.remote_form").bind("ajax:error", function(event, response, status, xhr){
+            self.clearErrors();
+            self.errors = $.parseJSON(response.responseText);
+            self.displayErrors();
+       });
+     },
+     this.clearErrors = function(){
+        $("span.help-inline").fadeOut().remove(); 
+     },
+     this.displayErrors = function(){
+        var self = this;
+         $.each(self.errors, function(field, error){
+              $input_field = $("#" + self.objName + "_" + field);
+              $formatted_error = $("<span/>").addClass('help-inline').html(error[0]).insertAfter($input_field);;
+              $input_field.closest("div.controls").append($formatted_error);
+        });
+     }
+     
+     this.objName = objName;
+     this.initialize();
+  
+};
+
+

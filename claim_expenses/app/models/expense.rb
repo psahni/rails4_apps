@@ -1,10 +1,16 @@
 class Expense < ActiveRecord::Base
+  self.include_root_in_json = true
 
+  MINIMUM = 1
+  
   # => Associations
   belongs_to :user
-  belongs_to :expense_category
+  belongs_to :category
 
-  validates :item_name, :item_price, :expense_category_id,   :presence => true
-  validates_numericality_of :item_price
+  validates :item_name, :item_price, :category_id,   :presence => true
+  validates_numericality_of :item_price, :greater_than => MINIMUM
 
+  attr_accessible :item_name,
+                  :item_price,
+                  :category_id
 end

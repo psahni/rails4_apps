@@ -167,7 +167,13 @@ jQuery(function($){
 				if (!($(e).data('convert') == 'no')) {
 					$(e).hide().wrap('<div class="btn-group" id="select-group-' + i + '" />');
 					var select = $('#select-group-' + i);
-					var current = ($(e).val()) ? $(e).val(): 'Select';
+					var current;
+					if( $(e).val().length ){
+					    current = $(e).find("option:selected").text();
+					}
+					else{ 
+					    current = "Select" 
+					}
 					select.html('<input type="hidden" value="' + $(e).val() + '" name="' + $(e).attr('name') + '" id="' + $(e).attr('id') + '" class="' + $(e).attr('class') + '" /><a class="btn" href="javascript:;">' + current + '</a><a class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:;"><span class="caret"></span></a><ul class="dropdown-menu"></ul>');
 					$(e).find('option').each(function(o,q) {
 						select.find('.dropdown-menu').append('<li><a href="javascript:;" data-value="' + $(q).attr('value') + '">' + $(q).text() + '</a></li>');

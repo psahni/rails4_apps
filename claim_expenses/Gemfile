@@ -7,6 +7,9 @@ gem 'mysql2'
 gem "protected_attributes", :git=>"https://github.com/rails/protected_attributes.git"
 gem 'simple_form', :git => "https://github.com/plataformatec/simple_form.git", :branch => "rails_4"
 
+# For Javascript Template
+gem "ejs", '1.1.1'
+
 group :development do
     gem "wirble"
     gem "awesome_print"
