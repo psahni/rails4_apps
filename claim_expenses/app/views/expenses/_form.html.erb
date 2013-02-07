@@ -1,4 +1,4 @@
-<%= simple_form_for @expense, :html => {:class => "remote_form"}, :remote => true do |form|%>
+<%= simple_form_for @expense, :html => {:class => "remote_form", 'data-for' => 'expense'}, :remote => true do |form|%>
       
       <div class="span2">
         <%=form.input :item_name, :placeholder  => "Fruits, Lunch, etc ...", :input_html => {:class => 'input_width'}%>
@@ -20,7 +20,7 @@
   
 <% end %>
 
-<%=javascript_tag "var formObj = new Form('expense')"%>
+<%=javascript_tag "var formObj = new Form($('form#new_expense'))"%>
 
 <!-- 
 

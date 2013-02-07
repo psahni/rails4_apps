@@ -12,19 +12,38 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require app
 //= require plugins/dropdown
 //= require plugins/bootstrap-buttons
+//= require plugins/dottimeout
 
+var App = {};
 
-var Form = function(objName){
+$(function(){
+    App = {
+        container: "section.container",
+        containerEl: $("section.container"),
+        addNotice: function(mesg){
+          $("<div id='notice'/>").addClass("alert alert-success span10 mt-medium").html(mesg).prependTo(App.container);
+          $.doTimeout(3000, function(){ 
+                $('#notice').slideUp(); 
+                $.doTimeout(2000, function(){ $('#notice').remove() }); 
+           });
+        }
+    }
+});
+
+var Form = function(formObj){
      
      this.initialize = function(){
+        this.form = formObj;
+        this.objName = formObj.data('for');
         this.bindErrors();
+        this.savedNotice();
      },
      this.bindErrors = function(){
        var self = this;
-           
-       $("form.remote_form").bind("ajax:error", function(event, response, status, xhr){
+       this.form.bind("ajax:error", function(event, response, status, xhr){
             self.clearErrors();
             self.errors = $.parseJSON(response.responseText);
             self.displayErrors();
@@ -40,11 +59,41 @@ var Form = function(objName){
               $formatted_error = $("<span/>").addClass('help-inline').html(error[0]).insertAfter($input_field);;
               $input_field.closest("div.controls").append($formatted_error);
         });
+     },
+     this.savedNotice = function(){
+         this.form.bind("ajax:success", function(event, response, status, xhr){
+             App.addNotice(response.notice);
+         });
      }
      
-     this.objName = objName;
      this.initialize();
   
 };
 
+
+
+
+
+
+
+
+
+
+
+/*
+===========================================================
+
+
+   6 Event Callbacks
+   
+ajax:before – right before ajax call
+ajax:loading – before ajax call, but after XmlHttpRequest object is created)
+ajax:success – successful ajax call
+ajax:failure – failed ajax call
+ajax:complete – completion of ajax call (after ajax:success and ajax:failure)
+ajax:after – after ajax call is sent (note: not after it returns)
+
+===========================================================
+
+*/
 

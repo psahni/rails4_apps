@@ -1,4 +1,6 @@
+
 <div class="block span12">
+  <%=flash_message%>
   <div id="sessions" class="form-horizontal span7 fl">
     <h2 class="span4">Sign in</h2>
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>

@@ -1,5 +1,4 @@
 class Expense < ActiveRecord::Base
-  self.include_root_in_json = true
 
   MINIMUM = 1
   

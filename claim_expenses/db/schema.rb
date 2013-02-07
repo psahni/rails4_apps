@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20130119071605) do
   end
 
   create_table "expenses", force: true do |t|
-    t.string   "item_name",                           null: false
-    t.decimal  "item_price",  precision: 4, scale: 2
+    t.string   "item_name",                            null: false
+    t.decimal  "item_price",  precision: 10, scale: 2
     t.integer  "category_id"
     t.integer  "user_id"
     t.datetime "created_at"

@@ -11,7 +11,10 @@ class ExpensesController < ApplicationController
     if @expense.save
       respond_to do |format|
         format.html{ redirect_to expenses_path }
-        format.js{   render :json => {:success => true } }
+        format.js{ render :json => { :data => @expense.attributes, :notice => "Yay! Saved Successfully" },
+                          :content_type => 'application/json', 
+                          :layout => false, 
+                          :status => :ok }
       end
     else
       respond_to do |format|

@@ -5,7 +5,7 @@ module ApplicationHelper
       message, klass = flash[:alert] ? [flash[:alert], 'alert-error'] : [flash[:success], 'alert-success']
     end
     if message
-      content_tag(:div, message, :class => klass << ' alert span12 offset1 mt-medium').html_safe
+      content_tag(:div, message, :class => klass << ' alert span10 mt-medium').html_safe
     end
   end
 end
