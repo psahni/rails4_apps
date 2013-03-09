@@ -25,16 +25,16 @@ $(function(){
         containerEl: $("section.container"),
         addNotice: function(mesg){
           $("<div id='notice'/>").addClass("alert alert-success span10 mt-medium").html(mesg).prependTo(App.container);
-          $.doTimeout(3000, function(){ 
-                $('#notice').slideUp(); 
-                $.doTimeout(2000, function(){ $('#notice').remove() }); 
+          $.doTimeout(3000, function(){
+                $('#notice').slideUp();
+                $.doTimeout(2000, function(){ $('#notice').remove() });
            });
         }
     }
 });
 
 var Form = function(formObj){
-     
+
      this.initialize = function(){
         this.form = formObj;
         this.objName = formObj.data('for');
@@ -50,7 +50,7 @@ var Form = function(formObj){
        });
      },
      this.clearErrors = function(){
-        $("span.help-inline").fadeOut().remove(); 
+        $("span.help-inline").fadeOut().remove();
      },
      this.displayErrors = function(){
         var self = this;
@@ -65,9 +65,9 @@ var Form = function(formObj){
              App.addNotice(response.notice);
          });
      }
-     
+
      this.initialize();
-  
+
 };
 
 
@@ -85,7 +85,7 @@ var Form = function(formObj){
 
 
    6 Event Callbacks
-   
+
 ajax:before – right before ajax call
 ajax:loading – before ajax call, but after XmlHttpRequest object is created)
 ajax:success – successful ajax call
@@ -95,5 +95,11 @@ ajax:after – after ajax call is sent (note: not after it returns)
 
 ===========================================================
 
-*/
 
+Ajax Events
+http://docs.jquery.com/Ajax_Events
+
+
+UJS - rails 3
+http://www.simonecarletti.com/blog/2010/06/unobtrusive-javascript-in-rails-3/
+*/

@@ -8,27 +8,31 @@ The Rails executable is at:
 
 * Create `bundle show rails`/railties/bin/rails new testapp
 
-* create an alias and add it to .bashrc. 
+* create an alias and add it to .bashrc.
     alias rails4="`bundle show rails`/railties/bin/rails"
 
-Important gems
+#Important gems
 ============================================
 
-Devise
+### Devise
 https://github.com/plataformatec/devise
+
     generated devise views
+
   *  <tt>rails4 generate devise:views</tt>
-  * Redirection after sign up/ registration -> 
-       https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-on-successful-sign-up-(registration)  
+
+  * Redirection after sign up/ registration ->
+       https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-on-successful-sign-up-(registration)
+
    * After Sign out
-       https://github.com/plataformatec/devise/wiki/How-To:-Change-the-redirect-path-after-destroying-a-session-i.e.-signing-out
+        https://github.com/plataformatec/devise/wiki/How-To:-Change-the-redirect-path-after-destroying-a-session-i.e.-signing-out
         https://github.com/plataformatec/devise/wiki/How-To:-Redirect-back-to-current-page-after-sign-in,-sign-out,-sign-up,-update
-        
+
  * Devise helper file
      https://github.com/plataformatec/devise/blob/master/lib/devise/controllers/helpers.rb
-     
-     
-Passenger Installation Gude
+
+
+### Passenger Installation Gude
 http://www.modrails.com/documentation/Users%20guide%20Standalone.html
     After installing passenger, hit 'passenger' from terminal
     it will automatically install and compile ngnix if not already installed
