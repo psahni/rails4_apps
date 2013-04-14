@@ -1,2 +1,2 @@
-rvm use 1.9.3
+rvm use ruby-1.9.3-p385
 rvm gemset use rails4

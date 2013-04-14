@@ -1,5 +1,9 @@
 
 <%=flash_message %>
+<%= content_tag :div, '', id:'expenses', style:"display:none", 
+    data: { expenses: Expense.all } 
+%>
+
 
 <div class="span11 template">
   <h2 class="t-heading"> Add item list </h2>
