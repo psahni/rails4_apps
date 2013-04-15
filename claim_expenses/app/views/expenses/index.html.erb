@@ -1,8 +1,6 @@
 
 <%=flash_message %>
-<%= content_tag :div, '', id:'expenses', style:"display:none", 
-    data: { expenses: Expense.all } 
-%>
+
 
 
 <div class="span11 template">
@@ -10,3 +8,10 @@
   <%=render :partial => "form"%>
   <%#=render Expense.all%>
 </div>
+
+
+
+<%= content_tag :div, '', id:'expenses', style:"display:none", class: 'template span11', 
+    data: { expenses: Expense.all.to_json(:root => false) } 
+%>
+

@@ -386,6 +386,7 @@ select {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
+    z-index: 100;
 }
 
 .dropdown-menu li > a:hover,

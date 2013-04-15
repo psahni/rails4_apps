@@ -1,5 +1,8 @@
 class Expense < ActiveRecord::Base
-
+  
+  self.include_root_in_json = false
+  
+  
   MINIMUM = 1
   
   # => Associations
