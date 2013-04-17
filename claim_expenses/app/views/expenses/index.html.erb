@@ -1,17 +1,18 @@
+<div id='expense-main-page' class='span12 template'>
+  <%=flash_message %>
 
-<%=flash_message %>
+
+
+  <div class="span11">
+    <h2 class="t-heading"> Add item list </h2>
+     <%=render :partial => "form"%>
+     <%#=render Expense.all%>
+  </div>
 
 
 
-<div class="span11 template">
-  <h2 class="t-heading"> Add item list </h2>
-  <%=render :partial => "form"%>
-  <%#=render Expense.all%>
+  <%= content_tag :div, '', id:'expenses', style:"display:none", class: 'template span11', 
+      data: { expenses: Expense.all.to_json(:root => false) } 
+  %>
+
 </div>
-
-
-
-<%= content_tag :div, '', id:'expenses', style:"display:none", class: 'template span11', 
-    data: { expenses: Expense.all.to_json(:root => false) } 
-%>
-

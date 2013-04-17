@@ -21,7 +21,7 @@ window.Expense.Routers = Backbone.Router.extend({
 		window.Expense.all = this.container.data('expenses');
 		this.container.empty();
 		/* PASS INTO VIEW*/
-		var expenseView = new window.Expense.ExpenseIndexView({collection: this.collection});
+		var expenseView = new window.Expense.ExpenseIndexView({collection: this.collection });
 		this.container.html(expenseView.render().el).fadeIn();
 	}
 
