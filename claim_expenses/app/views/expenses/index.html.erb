@@ -12,7 +12,7 @@
 
 
   <%= content_tag :div, '', id:'expenses', style:"display:none", class: 'template span11', 
-      data: { expenses: Expense.all.to_json(:root => false) } 
+      data: { expenses: Expense.all.order('created_at desc').to_json(:root => false) } 
   %>
 
 </div>
