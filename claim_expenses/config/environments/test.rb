@@ -33,4 +33,6 @@ ClaimExpenses::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  
+  default_url_options[:host] = 'localhost:9999'
 end
