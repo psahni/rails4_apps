@@ -10,7 +10,7 @@
       
       
       <div class="span2">
-        <%=form.input :category_id, :collection => ExpenseCategory.all.collect{|ec| [ec.name, ec.id]}, :prompt => "Select"%>
+        <%=form.input :category_id, :collection => ExpenseCategory.all.collect{|ec| [ec.name, ec.id]}, :prompt => "Select", :input_html => {:listing_id => "category_listing"}%>
       </div>
       
      

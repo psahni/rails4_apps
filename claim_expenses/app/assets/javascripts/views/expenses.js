@@ -29,9 +29,11 @@ window.Expense.ExpenseIndexView = Backbone.View.extend({
         expense     = new window.Expense.Model(response);
         expenseView = new window.Expense.ExpenseView({model: expense});                  
          $.doTimeout(200, function(){
-            self.$el.find('ul').prepend(expenseView.render().el);
+            self.$el.find('ul.expense-list').prepend(expenseView.render().el);
             $('ul.clear li:first').hide().slideDown();  
-           self.$expense_form[0].reset();     
+            
+            App.addNotice(res.notice);
+            self.$expense_form[0].reset();     
         });     
      });
      
