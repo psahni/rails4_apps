@@ -50,7 +50,7 @@ gem 'therubyracer'
 # gem 'capistrano', group: :development
 
 # To use debugger
- gem 'debugger', :group => :development
+# gem 'debugger', :group => :development
  
  
  gem "quiet_assets", ">= 1.0.2", :group => :development
